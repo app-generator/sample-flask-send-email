@@ -7,7 +7,9 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from importlib import import_module
+from flask_mail import Mail
 
+mail = Mail()
 
 db = SQLAlchemy()
 login_manager = LoginManager()
@@ -38,6 +40,10 @@ def configure_database(app):
 def create_app(config):
     app = Flask(__name__)
     app.config.from_object(config)
+
+    # mail
+    mail.init_app(app)
+
     register_extensions(app)
     register_blueprints(app)
     configure_database(app)
