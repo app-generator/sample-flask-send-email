@@ -13,4 +13,6 @@ flask-restx==0.5.1
 python-dotenv==0.19.2
 Flask-Minify==0.37
 
-flask_mysqldb
+Flask-Mail==0.9.0
+
+#flask_mysqldb
