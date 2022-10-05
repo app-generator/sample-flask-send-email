@@ -19,6 +19,18 @@ class Config(object):
 
     # Assets Management
     ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')    
+
+    # Mail Settings
+    MAIL_SERVER   = os.getenv('MAIL_SERVER')
+    MAIL_PORT     = os.getenv('MAIL_PORT')
+
+    # Mail Authentication
+    MAIL_USERNAME = os.getenv('MAIL_USERNAME')
+    MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
+    MAIL_USE_TLS  = True
+
+    # Mail Accounts
+    MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER')
     
 class ProductionConfig(Config):
     DEBUG = False
