@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.7] 2022-10-05
+### Improvements
+
+- Add a contact form
+- Email credentials provided via `.env`
+
 ## [1.0.6] 2022-05-31
 ### Improvements
 
